@@ -4,8 +4,8 @@ import { Schema } from "mongoose";
 const productsSchema = new Schema({
     title:String,
     price:String,
-    image:String,
-    category:String
-})
+    category:String,
+    image:String
+    })
 
 export const Products = mongoose.model("Products", productsSchema)
