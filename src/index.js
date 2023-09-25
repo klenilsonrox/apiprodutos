@@ -6,9 +6,19 @@ import routerProducts from "./routes/router.js"
 
 const app = express()
 
-app.use(cors({
-    origin:"https://rxdvamazon.netlify.app","https://apipostprodutos.netlify.app/"
-}))
+const whitelist = ['https://rxdvamazon.netlify.app/', 'https://apipostprodutos.netlify.app/'];
+
+const corsOptions = {
+    origin: function (origin, callback) {
+      if (whitelist.indexOf(origin) !== -1 || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Acesso não permitido por CORS'));
+      }
+    },
+  };
+
+  app.use(cors(corsOptions));
 
 app.use(express.json())
 app.use("/",routerProducts)
