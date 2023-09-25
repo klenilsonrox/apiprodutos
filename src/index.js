@@ -7,7 +7,7 @@ import routerProducts from "./routes/router.js"
 const app = express()
 
 app.use(cors({
-    origin:"http://localhost:5173"
+    origin:"https://rxdvamazon.netlify.app"
 }))
 
 app.use(express.json())

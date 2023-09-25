@@ -31,13 +31,15 @@ export const createProducts = async (req, res) => {
         title,
         price,
         image,
-        category
+        category,
+        url
     } = req.body
     const produto = {
         title,
         price,
         image,
-        category
+        category,
+        url
     }
     try {
         if (produto) {
@@ -48,10 +50,7 @@ export const createProducts = async (req, res) => {
             message: error
         })
     }
-    res.status(201).json({
-        produto,
-        message: "Produto criado com sucesso"
-    })
+    res.status(201).json({produto})
 }
 
 
