@@ -8,7 +8,8 @@ const app = express()
 const corsOptions = {
   origin: [
     'https://rxdvamazon.netlify.app',
-    'https://apipostprodutos.netlify.app'
+    'https://apipostprodutos.netlify.app',
+    "http://localhost:5173/"
   ],
 };
 
