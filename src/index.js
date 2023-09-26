@@ -5,15 +5,10 @@ import routerProducts from "./routes/router.js"
 
 
 const app = express()
-const link01= process.env.MONGODB_LINK1
-const link02= process.env.MONGODB_LINK2
-
-
-
 const corsOptions = {
   origin: [
-    link01,
-    link02
+    'https://rxdvamazon.netlify.app/',
+    'https://apipostprodutos.netlify.app/'
   ],
 };
 
