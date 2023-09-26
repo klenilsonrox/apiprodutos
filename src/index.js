@@ -5,18 +5,17 @@ import routerProducts from "./routes/router.js"
 
 
 const app = express()
+const link01= process.env.MONGODB_LINK1
+const link02= process.env.MONGODB_LINK2
 
-const whitelist = ['https://rxdvamazon.netlify.app/', 'https://apipostprodutos.netlify.app/'];
+
 
 const corsOptions = {
-    origin: function (origin, callback) {
-      if (whitelist.indexOf(origin) !== -1 || !origin) {
-        callback(null, true);
-      } else {
-        callback(new Error('Acesso não permitido por CORS'));
-      }
-    },
-  };
+  origin: [
+    link01,
+    link02
+  ],
+};
 
   app.use(cors(corsOptions));
 
