@@ -7,8 +7,8 @@ import routerProducts from "./routes/router.js"
 const app = express()
 const corsOptions = {
   origin: [
-    'https://rxdvamazon.netlify.app/',
-    'https://apipostprodutos.netlify.app/'
+    'https://rxdvamazon.netlify.app',
+    'https://apipostprodutos.netlify.app'
   ],
 };
 
