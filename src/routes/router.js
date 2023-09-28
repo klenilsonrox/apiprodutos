@@ -3,7 +3,7 @@ import { createProducts, deleteProduct, getAllProducts, getByCategory, getProduc
 
 const router = Router()
 
-router.get("/", home)
+router.get("/api", home)
 router.get("/api/produtos", getAllProducts)
 router.get("/api/produtos/:id", getProductById)
 router.get("/api/produtos/category/:category", getByCategory)
